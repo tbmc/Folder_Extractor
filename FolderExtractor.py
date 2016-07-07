@@ -3,6 +3,12 @@ import os, sys
 
 
 def extract_folder(dir, base_dir=os.getcwd(), recursive=False):
+    """
+    Permet de déplacer tous les fichiers d'un dossier dans un autre dossier
+    :param dir: Dossier dans lequel chercher les fichiers
+    :param base_dir: Dossier dans lequel déplacer les fichiers trouvés
+    :param recursive: Chercher dans tous les sous dossier et pas uniquement dans le dossier courrant
+    """
     for n in os.listdir(dir):
         print(dir + "/" + n)
         if os.path.isfile(dir + "/" + n):
